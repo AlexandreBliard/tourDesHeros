@@ -88,3 +88,8 @@ selectedHero: Hero;
 mais par conséquent notre code avec la sélection qui fonctionnait avec hero.id ne fonctionne plus, il faut le définir comme selectedHero.id
 et rajouter un ``` *ngIf="selectedHero"``` pour vérifier si un héros est ou non sélectionné. Dès que nous chargerons la page, iol n'existera pas, mai spar conséquent Angular se chargera de cacher cette partie là.
 
+# une tâche pour un component
+notre component fais DEUX choses : afficher les héros et afficher les détails. Ceci est mal, car en cas de modifications ou de réutilisation cela peut entrainer des problèmes. On créez donc un nouveau component hero-detail, on colle toute la partie affichage dans son html, on modifie selectedhero en hero puis on importe dans son .ts le Hero de hero et on met Input également ```import { Component, OnInit, Input } from '@angular/core';
+import {Hero} from "../hero";```
+puis on demande à Input hero ``` @Input() hero : Hero; ```
+et c'est tout, la magie angular fais le reste
