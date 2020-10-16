@@ -9,12 +9,24 @@ permet de créer un nouveau projet angular
 ```
   ng serve --open
 ```
-permet de builder l'app, de démarrer le serveur, lire les fichiers soucres et de rebuild si nous apportons un changement. --open permet de l'ouvrir de suite dans un navigateur
+permet de builder l'app, de démarrer le serveur, lire les fichiers soucres et de rebuild si nous apportons un changement. ```--open``` permet de l'ouvrir de suite dans un navigateur ```--port``` permet de spécifier le port
 
 ```
 ng generate component heroes
 ```
 CLI va créer un composant héros et créer un dossier avec 4 fichiers (.html, .scss, .spec.ts et .ts)
+
+```
+ng generate service hero
+```
+permet de générer un service, permettant la communication ou l'attente d'évènement.
+
+```
+  ng generate module app-routing --flat --module=app
+```
+permet de générer app-routing, servant à gérer les routes
+``` --flat ```permet de mettre le fichier dans app/src plutôt qu'il ne le mette dans son propre dossier
+```--module=app```permet de demander à CLI de gérer l'import de app-routing au niveau de app.module
 
 # faire communiquer les pages
 Nous avons notre page principal qui est app.component.html
